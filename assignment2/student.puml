@@ -1,0 +1,13 @@
+@startuml
+class Student {
+  - name : str
+  - student_id : str
+  - major : str
+  - gpa : float
+  + __init__(name, student_id, major, gpa)
+  + default() : Student
+  + display_info() : void
+  + academic_standing() : str
+  + __str__() : str
+}
+@enduml
