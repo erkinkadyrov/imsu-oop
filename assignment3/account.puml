@@ -1,0 +1,29 @@
+@startuml
+class Amount {
+  + amount : float
+  + timestamp : datetime
+  + transaction_type : str
+  + __init__(amount, transaction_type, timestamp)
+  + __str__() : str
+}
+
+class PersonalAccount {
+  + account_number : int
+  + account_holder : str
+  + balance : float
+  + transactions : list<Amount>
+  + deposit(amount)
+  + withdraw(amount)
+  + print_transaction_history()
+  + get_balance() : float
+  + get_account_number() : int
+  + set_account_number(value)
+  + get_account_holder() : str
+  + set_account_holder(value)
+  + __add__(amount)
+  + __sub__(amount)
+  + __str__() : str
+}
+
+PersonalAccount "1" o-- "many" Amount : records
+@enduml
